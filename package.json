@@ -1,5 +1,5 @@
 {
-  "name": "ghblog-rss",
+  "name": "gh-blog-rss",
   "version": "0.0.0",
   "description": "RSS generator plugin for gh-blog.",
   "main": "index.coffee",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gh-blog/ghblog-rss"
+    "url": "https://github.com/gh-blog/gh-blog-rss"
   },
   "keywords": [
-    "ghblog-plugin",
+    "gh-blog-plugin",
     "rss",
     "atom"
   ],
   "author": "Muhammad Fawwaz Orabi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gh-blog/ghblog-rss/issues"
+    "url": "https://github.com/gh-blog/gh-blog-rss/issues"
   },
-  "homepage": "https://github.com/gh-blog/ghblog-rss"
+  "homepage": "https://github.com/gh-blog/gh-blog-rss"
 }
