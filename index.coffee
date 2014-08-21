@@ -2,8 +2,7 @@ fs = require 'fs'
 path = require 'path'
 through2 = require 'through2'
 URL = require 'url'
-# @TODO: replace with Vinyl
-{ File } = require('gulp-util')
+File = require 'vinyl'
 Feed = require 'feed'
 _ = require 'lodash'
 cheerio = require 'cheerio'

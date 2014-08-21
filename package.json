@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/gh-blog/gh-blog-rss/issues"
   },
-  "homepage": "https://github.com/gh-blog/gh-blog-rss"
+  "homepage": "https://github.com/gh-blog/gh-blog-rss",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "feed": "^0.2.6",
+    "lodash": "^2.4.1",
+    "through2": "^0.6.1",
+    "vinyl": "^0.3.2"
+  }
 }
