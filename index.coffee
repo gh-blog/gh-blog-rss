@@ -1,5 +1,5 @@
 fs = require 'fs'
-path = require 'path'
+Path = require 'path'
 through2 = require 'through2'
 URL = require 'url'
 File = require 'vinyl'
@@ -27,7 +27,7 @@ module.exports = (filename, blog, options = { }) ->
         specify a host to resolve feed URLs against'
 
     resolve = (url) ->
-        URL.resolve blog.link, (path.join options.resolve, url || '')
+        URL.resolve blog.link, (Path.join options.resolve, url || '')
 
     isRelative = (url) ->
         Boolean not url.match externalRegExp
@@ -52,7 +52,7 @@ module.exports = (filename, blog, options = { }) ->
             item.date = file.created.date || new Date
             item.contributor = file.contributors || []
             item.link = resolve file.relative  # @TODO: url plugin
-            item.image = resolve file.stats.images[0] # @TODO: pick a nice image and resovle it
+            item.image = resolve file.images[0] # @TODO: pick a nice image and resovle it
 
             if options.full
                 $ = cheerio.load String file.contents
