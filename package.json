@@ -27,5 +27,10 @@
     "lodash": "^2.4.1",
     "through2": "^0.6.1",
     "vinyl": "^0.3.2"
+  },
+  "gh-blog": {
+    "provides": ["rss"],
+    "requires": ["info", "metadata", "creation-date", "content"],
+    "recommends": ["local-images", "text-direction", "embed", "excerpt", "syntax-highlighting"]
   }
 }

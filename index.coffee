@@ -51,8 +51,10 @@ module.exports = (filename, blog, options = { }) ->
 
             item.date = file.created.date || new Date
             item.contributor = file.contributors || []
-            item.link = resolve file.relative  # @TODO: url plugin
-            item.image = resolve file.images[0] # @TODO: pick a nice image and resovle it
+            # @TODO: url plugin
+            item.link = resolve file.relative
+            # @TODO: pick a nice image and resovle it
+            item.image = resolve file.images[0]
 
             if options.full
                 $ = cheerio.load String file.contents
