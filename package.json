@@ -1,6 +1,6 @@
 {
   "name": "gh-blog-rss",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "RSS generator plugin for gh-blog.",
   "main": "index.coffee",
   "scripts": {

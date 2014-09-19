@@ -12,12 +12,15 @@ cheerio = require 'cheerio'
 
 externalRegExp = new RegExp '^((ftp|http)s?:)?//', 'i'
 
-module.exports = (filename, blog, options = { }) ->
+module.exports = (options = { }) ->
     options = _.defaults options, {
+        filename: 'rss.xml'
         full: yes
         format: 'atom-1.0'
         resolve: '.'
     }
+
+    { filename, blog } = options
 
     if not filename
         throw new Error 'No path specified for RSS file'
@@ -49,7 +52,7 @@ module.exports = (filename, blog, options = { }) ->
             item.author = file.author
             item.title = file.title
 
-            item.date = file.created.date || new Date
+            item.date = file.created?.date || new Date
             item.contributor = file.contributors || []
             # @TODO: url plugin
             item.link = resolve file.relative
